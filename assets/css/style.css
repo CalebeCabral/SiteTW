@@ -24,12 +24,9 @@ html,body
 }
 
 main {
-	position: fixed;
 	background-position: 67% 0%;
 	background-repeat:no-repeat;
 	background-size:cover;
-   overflow-y: auto;
-   overflow-x: hidden;
 	width:100%;
 	height:100%;
 	font-family: gotham, Arial, sans-serif;
@@ -37,6 +34,18 @@ main {
 	letter-spacing: .6rem;
 	line-height: 3rem;
 	color: white;
+}
+
+main > section {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+   overflow-y: auto;
+   overflow-x: hidden;
+	top:0;
+	left:0;
+	z-index: 2;
+	min-width: 1350px;
 }
 
 .z-0 {
@@ -87,7 +96,7 @@ main {
    * INDEX
 */
 main#index {
-   background: url(../media/images/bg_index.png) no-repeat;
+   background: url(../media/compressed/bg_index.png) no-repeat;
    background-position: center;
    letter-spacing: .2rem;
    line-height: 2rem;
@@ -135,8 +144,9 @@ main#index .footer__social-icons img {
 /* 
    * CONTENT BUSINESS
 */
+
 main#content-business {
-   background: url(../media/images/bg.jpg) no-repeat;
+   background: url(../media/compressed/bg.jpg) no-repeat;
    background-position: center;
    letter-spacing: .3rem;
 }
@@ -147,7 +157,7 @@ main#content-business {
 }
 
 #inicio h2 {
-   line-height: 3.5rem;
+   line-height: 3rem;
 }
 
 #sobreNew .quote {
@@ -285,12 +295,13 @@ main#content-business {
 
 #comoFazemos .row .quote {
    position: absolute;
-   top: -65px;
-   right: 325px;
+   top: -70px;
+   left: 15rem;
 }
 
 #comoFazemos .row h3 {
-   line-height: 5rem;
+   line-height: 3rem;
+   font-size: 1.6rem;
 }
 
 #comoFazemos .pontos {
@@ -311,26 +322,26 @@ main#content-business {
    width: 20px;
    height: 20px;
    border-radius: 50%;
-   border: 2px solid #cc74d8;
+   border: 2px solid #a945b5;
    position: absolute;
    left: -27px;
    top: 13px;
-   background-color: #bc4cca;
+   background-color: #953ca0;
 }
 
 #comoFazemos .pontos span:first-child {
-   top: 395px;
-   right: 986px;
+   top: 284px;
+   right: 1094px;
 }
 
 #comoFazemos .pontos span:nth-child(2) {
-   top: 558px;
-   right: 765px;
+   top: 375px;
+   right: 638px;
 }
 
 #comoFazemos .pontos span:last-child {
-   top: 613px;
-   right: 430px;
+   top: 442px;
+   right: 514px;
 }
 
 #comoFazemos > .chamada h3 span.break {
@@ -346,7 +357,7 @@ main#content-business {
 }
 
 #comoFazemos .purple-bg div:first-child {
-   background: url(../media/images/bg_como-fazemos1.png) no-repeat;
+   background: url(../media/compressed/bg_como-fazemos.png) no-repeat;
    background-position: right top;
    width: 100%;
    height: 100%;
@@ -354,29 +365,22 @@ main#content-business {
    opacity: .7;
 }
 
-#comoFazemos .purple-bg div:last-child {
-   background: url(../media/images/bg_como-fazemos2.png) no-repeat;
-   background-position: right top;
-   width: 100%;
-   height: 100%;
-   position: absolute;
+#contato .contact-box .contact-box__texto {
+   line-height: 2.5rem;
+}
+
+#contato .contact-box span.break {
+   display: block;
 }
 
 /* 
    * ENDO CULTURE
 */
-main#endo-culture
-{
-	background: url(../media/images/bg.jpg);
-	width: 100%;
-	height: 100%;
-	top:0;
-	left:0;
-	z-index: 2;
-	min-width: 1350px;
+main#endo-culture {
+	background: url(../media/compressed/bg.jpg);
 }
 
-.parallax__container{
+.parallax__container {
 	position: absolute;
 	width: 100%;
 	height: 100%;
@@ -385,20 +389,19 @@ main#endo-culture
 }
 
 .depth1__parallax{
-	background-image: url('../media/images/boneco-1.png');
+	background-image: url(../media/compressed/boneco-1.png);
 	background-position: 73% 44% !important;
-	/* background-size: 30% 80% !important; */
 	background-size: contain !important;
 }
 
 .depth2__parallax{
-	background-image:url('../media/images/estilhaco-2.png');
+	background-image:url(../media/compressed/estilhaco-2.png);
 	background-position: -20% 0% !important;
 	opacity: .9;
 }
 
 .depth3__parallax{
-	background-image: url(../media/images/estilhaco-1.png);
+	background-image: url(../media/compressed/estilhaco-1.png);
 	background-position: 70% 0% !important;
 	background-size: 57% !important;
 	opacity: 0.9;
@@ -413,7 +416,18 @@ main#endo-culture
 	background-repeat:no-repeat;
 	width: 100%;
 	z-index: 0;
-	height: 90%;
+   height: 90%;
+   animation: fadeIn 4s 1s both;
+}
+
+@keyframes fadeIn {
+   0% {
+      opacity: 0;
+   }
+
+   100% {
+      opacity: 1;
+   }
 }
 
 .social-icons>a
@@ -1062,7 +1076,7 @@ img.time_tw {
 		right: 1.3rem;
 	}
 	
-	main>section {
+   main > section {
 		min-width: 100%;
 	}
 
@@ -1279,21 +1293,42 @@ img.time_tw {
    #skills .title-box {
       width: 40% !important;
    }
+
+   #comoFazemos {
+      padding-top: 1.5rem !important;
+   }
+
+   #comoFazemos .row.chamada {
+      flex-direction: column-reverse !important;
+   }
+
+   #comoFazemos .row p {
+      padding: 0px !important;
+      margin-right: 0px !important;
+   }
    
    #comoFazemos .row .quote {
-      top: -65px;
+      top: -45px;
       right: auto;
       left: auto;
    }
 
+   #comoFazemos .row h3 {
+      margin: 0px !important;
+   }
+
+   #comoFazemos .row h3 span.break {
+      display: none !important;
+   }
+
    #comoFazemos .pontos span:first-child {
-      top: 326px;
-      right: 495px;
+      top: 331px;
+      right: 496px;
    }
    
    #comoFazemos .pontos span:nth-child(2) {
-      top: 472px;
-      right: 517px;
+      top: 477px;
+      right: 516px;
    }
    
    #comoFazemos .pontos span:last-child {
@@ -1388,9 +1423,9 @@ img.time_tw {
 }
 
 @media (max-width: 700px) {
-	/* .block-cit {
-		min-height: 100vh;
-	} */
+	.block-cit {
+		min-height: 63vh;
+	}
 
 	.timer .arrows>img {
 		width: 5%;
