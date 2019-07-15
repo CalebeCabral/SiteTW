@@ -14,7 +14,7 @@
    <link rel="stylesheet" href="assets/css/jquery-ui.structure.min.css">
    <link rel="stylesheet" href="assets/css/style.css">
 
-   <link rel="shortcut icon" href="assets/media/images/tw.ico" type="image/x-icon">
+   <link rel="shortcut icon" href="assets/media/compressed/tw.ico" type="image/x-icon">
 
 </head>
 
@@ -22,7 +22,23 @@
 
    <main class="container-fluid px-0" id="content-business">
 
+      <div class="menu-dots purple d-none d-lg-flex flex-column justify-content-center align-items-center">
+
+         <div class="menu-dot actv mb-3 cursor-pointer"></div>
+         <div class="menu-dot mb-3 cursor-pointer"></div>
+         <div class="menu-dot mb-3 cursor-pointer"></div>
+         <div class="menu-dot mb-3 cursor-pointer"></div>
+         <div class="menu-dot mb-3 cursor-pointer"></div>
+
+      </div>
+
       <section class="row m-0">
+
+         <div class="parallax visible">
+            <img src="./assets/media/images/parallax2.png">
+         </div>
+
+         <span class="ref-point"></span>
 
          <div class="col-12 px-0 mb-lg-5" id="inicio">
 
@@ -91,7 +107,7 @@
 
          </div>
 
-         <div class="col-12 position-relative pt-4 px-0 pb-5 mt-5 my-lg-5" id="sobreNew">
+         <div class="col-12 position-relative pt-4 px-0 pb-5 mt-5 my-lg-5" id="sobre">
             <div class="row position-relative justify-content-center justify-content-lg-start py-5 z-1">
                <div class="col-10 pt-5 pt-sm-5 col-lg-7 offset-lg-2 text-uppercase">
                   <div class="quote">
@@ -129,7 +145,7 @@
 
          <div class="col-12 spacer" id="sobre_news"></div>
 
-         <div class="col-12 position-relative px-0 py-5 mb-5 mt-0 my-lg-5" id="skills">
+         <div class="col-12 position-relative px-0 py-5 mb-5 mt-0 mt-lg-5" id="skills">
             <div class="title-box d-flex justify-content-end position-relative pr-5 py-5 w-25">
                <h3 class="color-purple-secondary position-relative text-uppercase z-1">
                   Nossos<span class="break"></span>
@@ -146,7 +162,7 @@
                </div>
             </div>
 
-            <div class="row position-relative py-xl-5 my-xl-5">
+            <div class="row position-relative py-xl-5 mt-xl-5">
                <div class="col-10 col-lg-8 offset-1 offset-lg-3 py-5 text-lg-right text-uppercase">
                   <h3 class="mb-5">O QUE ESTAMOS FAZENDO</h3>
 
@@ -158,52 +174,51 @@
 
             <div class="row justify-content-center">
                <div class="col-10 col-lg-4 col-xl-2 my-5 px-0 px-lg-4 mx-lg-4 text-center text-lg-left skills-card">
-                  <div class="d-flex justify-content-center mb-5 pr-4 thumb">
+                  <div class="d-flex flex-column align-items-center mb-4 thumb">
                      <img src="assets/media/compressed/skill_img-1.png">
+                     <span class="px-3 text-uppercase">Arquitetura da Informação</span>
                   </div>
 
-                  <h5 class="text-uppercase mb-3">Arquitetura da Informação</h5>
+                  <p class="">Projeto de arquitetura da informação com etapas de desenvolvimento e evolução e
+                     arquitetura de um
+                     dos portais de atendimento: inventário, estruturação e conteúdo.</p>
 
-                  <p>Projeto de arquitetura da informação com etapas de desenvolvimento e evolução e arquitetura de um
-                     dos portais de atendimento: inventário, estruturação e conteúdo. Ações multidisciplinares visando a
+                  <p class="">Ações multidisciplinares visando a
                      melhor organização do conteúdo, usabilidade e qualidade da informação.</p>
                </div>
 
                <div class="col-10 col-lg-4 col-xl-2 my-5 px-0 px-lg-4 mx-lg-4 text-center text-lg-left skills-card">
-                  <div class="d-flex justify-content-center mb-5 pr-4 thumb">
+                  <div class="d-flex flex-column align-items-center mb-4 thumb">
                      <img src="assets/media/compressed/skill_img-2.png">
+                     <span class="px-3 text-uppercase">User Experience</span>
                   </div>
 
-                  <h5 class="text-uppercase mb-3">USER EXPERIENCE</h5>
-
-                  <p>Análise dos elementos e fatores que determinam a experiência do usuário, para nova proposta de
+                  <p class="px-4">Análise dos elementos e fatores que determinam a experiência do usuário, para
+                     nova proposta de
                      usabilidade com foco na otimização de cliques e menor tempo de respostas nos atendimentos.
                   </p>
                </div>
 
                <div class="col-10 col-lg-4 col-xl-2 my-5 px-0 px-lg-4 mx-lg-4 text-center text-lg-left skills-card">
-                  <div class="d-flex justify-content-center mb-5 thumb">
-                     <img src="assets/media/compressed/skill_img-3.png">
+                  <div class="d-flex flex-column align-items-center mb-4 thumb">
+                     <img src="assets/media/images/skill_img3-3.png">
+                     <span class="px-3 mr-4 text-uppercase">Business Content</span>
                   </div>
 
-                  <h5 class="text-uppercase mb-3">BUSINESS CONTENT</h5>
-
-                  <p>Planejamento, definição de padrões e fluxos aplicados à produção de conteúdo orientada para a
+                  <p class="">Planejamento, definição de padrões e fluxos aplicados à produção de conteúdo
+                     orientada para a
                      experiência do usuário.
                   </p>
                </div>
 
                <div class="col-10 col-lg-4 col-xl-2 my-5 px-0 px-lg-4 mx-lg-4 text-center text-lg-left skills-card">
-                  <div class="d-flex justify-content-center mb-5 pr-4 thumb">
+                  <div class="d-flex flex-column align-items-center mb-4 thumb">
                      <img src="assets/media/compressed/skill_img-4.png">
+                     <span class="px-2 text-uppercase">AUTOMAÇÃO DA INFORMAÇÃO E INSTRUMENTALIZAÇÃO DE CANAIS</span>
                   </div>
 
-                  <h5 class="text-uppercase mb-3">AUTOMAÇÃO DA
-                     INFORMAÇÃO E
-                     INSTRUMENTALIZAÇÃO
-                     DE CANAIS</h5>
-
-                  <p>Desenvolvimento de ferramentas que visam melhorar a experiência de interação dos usuários junto aos
+                  <p class="">Desenvolvimento de ferramentas que visam melhorar a experiência de interação dos
+                     usuários junto aos
                      atuais portais.</p>
                </div>
             </div>
@@ -212,7 +227,7 @@
          <div class="col-12 position-relative pt-4 pt-lg-5 px-0 my-5" id="comoFazemos">
             <div
                class="row justify-content-start justify-content-xl-end flex-column-reverse flex-xl-row position-relative z-1 px-5 mr-xl-5 chamada">
-               <p class="text-uppercase text-right pr-xl-5">
+               <p class="text-uppercase text-right pr-xl-5 mb-5 mb-sm-0">
                   A governança de conteúdo não se limita a textos, na TW vamos <br>
                   além do óbvio e buscamos envolver uma equipe multidisciplinar <br>
                   para solucionar problemas e melhorar a experiência do usuário <br>

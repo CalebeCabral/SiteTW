@@ -66,7 +66,7 @@ $(document).ready(function () {
 
    $root = $('main>section');
 
-   $(".menu-dots>.menu-dot").click(function () {
+   $("#content-business .menu-dots > .menu-dot").click(function () {
 
       $index = $(this).index();
 
@@ -76,32 +76,68 @@ $(document).ready(function () {
 
          case 0:
             window.location = "#inicio";
-            $(".menu-dots>.menu-dot").removeClass("white");
+            $(".menu-dots").removeClass("white").addClass("purple");
             break;
 
          case 1:
             window.location = "#sobre";
-            $(".menu-dots>.menu-dot").addClass("white");
+            $(".menu-dots").removeClass("purple").addClass("white");
+            break;
+
+         case 2:
+            window.location = "#skills";
+            $(".menu-dots").removeClass("white").addClass("purple");
+            break;
+
+         case 3:
+            window.location = "#comoFazemos";
+            $(".menu-dots").removeClass("purple").addClass("white");
+            break;
+
+         case 4:
+            window.location = "#contato";
+            $(".menu-dots").removeClass("purple").addClass("white");
+            break;
+      }
+
+   });
+
+   $("#endo-culture .menu-dots > .menu-dot").click(function () {
+
+      $index = $(this).index();
+
+      $(".menu-dots>.menu-dot").addClass("actv").not(this).removeClass("actv");
+
+      switch ($index) {
+
+         case 0:
+            window.location = "#inicio";
+            $(".menu-dots").removeClass("white");
+            break;
+
+         case 1:
+            window.location = "#sobre";
+            $(".menu-dots").addClass("white");
             break;
 
          case 2:
             window.location = "#clientes";
-            $(".menu-dots>.menu-dot").removeClass("white");
+            $(".menu-dots").removeClass("white");
             break;
 
          case 3:
             window.location = "#atuacao";
-            $(".menu-dots>.menu-dot").removeClass("white");
+            $(".menu-dots").removeClass("white");
             break;
 
          case 4:
             window.location = "#cases";
-            $(".menu-dots>.menu-dot").addClass("white");
+            $(".menu-dots").addClass("white");
             break;
 
          case 5:
             window.location = "#contato";
-            $(".menu-dots>.menu-dot").addClass("white");
+            $(".menu-dots").addClass("white");
             break;
 
       }

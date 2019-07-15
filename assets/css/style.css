@@ -122,11 +122,12 @@ main#index .rotas p {
 }
 
 main#index .rotas__quote {
-   width: 12%;
+   width: 8%;
 }
 
 main#index .rotas__quote img {
-   width: 100%;
+   width: auto;
+   height: 100%;
 }
 
 main#index .footer {
@@ -151,27 +152,65 @@ main#content-business {
    letter-spacing: .3rem;
 }
 
+main#content-business .parallax {
+   position: absolute;
+   width: 85%;
+   top: -40%;
+   right: 0;
+   perspective: 1000px;
+   animation: fadeIn 4s 1s both;
+}
+
+main#content-business .parallax img {
+   animation: parallaxAnimation 20s infinite ease;
+}
+
+.ref-point {
+   width: 10px;
+   height: 15px;
+   border-radius: 50%;
+   background-color: #fff;
+   position: absolute;
+   top: 387px;
+   left: 982px;
+   display: none;
+}
+
+@keyframes parallaxAnimation {
+   0% {
+      transform: rotateZ(11deg);
+   }
+
+   50% {
+      transform: rotateZ(6deg);
+   }
+
+   100% {
+      transform: rotateZ(11deg);
+   }
+}
+
 #inicio .row.spacer {
    width: 100%;
-   height: 10rem;
+   height: 5rem;
 }
 
 #inicio h2 {
    line-height: 3rem;
 }
 
-#sobreNew .quote {
+#sobre .quote {
    position: absolute;
    width: 40px;
    top: -95px;
    left: -11%;
 }
 
-#sobreNew .quote img {
+#sobre .quote img {
    width: 100%;
 }
 
-#sobreNew .purple-bg {
+#sobre .purple-bg {
    position: absolute;
    width: 100%;
    height: 100%;
@@ -180,14 +219,14 @@ main#content-business {
    opacity: .5;
 }
 
-#sobreNew .purple-bg > div:first-child {
+#sobre .purple-bg > div:first-child {
    height: 90%;
    width: 80%;
    position: absolute;
    background-color: #C240D3;
 }
 
-#sobreNew .purple-bg > div:last-child {
+#sobre .purple-bg > div:last-child {
    width: 90%;
    height: 40%;
    position: absolute;
@@ -196,19 +235,19 @@ main#content-business {
    background-color: #C240D3;
 }
 
-#sobreNew .fotos {
+#sobre .fotos {
    position: absolute;
    right: 0;
    opacity: .7;
    display: block;
 }
 
-#sobreNew .fotos img:first-child {
+#sobre .fotos img:first-child {
    position: absolute;
    right: 0;
 }
 
-#sobreNew .fotos img:last-child {
+#sobre .fotos img:last-child {
    position: absolute;
    right: 610px;
    top: 190px;
@@ -274,7 +313,8 @@ main#content-business {
 }
 
 #skills .skills-card p {
-   letter-spacing: 0rem;
+   letter-spacing: 0.2rem;
+   font-size: .8rem;
 }
 
 #skills .skills-card:nth-child(1) {
@@ -285,8 +325,25 @@ main#content-business {
    padding-top: 7rem;
 }
 
+#skills .skills-card .thumb img {
+   margin-bottom: -1px;
+}
+
+#skills .skills-card .thumb span {
+   font-size: .8rem;
+   background-color: #883f8f;
+}
+
+#skills .skills-card:not(:last-child) .thumb span {
+   white-space: nowrap;
+}
+
+#skills .skills-card:nth-child(4) .thumb span {
+   font-size: 0.7rem;
+}
+
 #comoFazemos {
-   height: 905px;
+   height: 571px;
 }
 
 #comoFazemos .row p {
@@ -296,7 +353,7 @@ main#content-business {
 #comoFazemos .row .quote {
    position: absolute;
    top: -70px;
-   left: 15rem;
+   right: 85%;
 }
 
 #comoFazemos .row h3 {
@@ -315,6 +372,7 @@ main#content-business {
 #comoFazemos .pontos span {
    position: absolute;
    text-transform: uppercase;
+   white-space: nowrap;
 }
 
 #comoFazemos .pontos span:before {
@@ -357,7 +415,7 @@ main#content-business {
 }
 
 #comoFazemos .purple-bg div:first-child {
-   background: url(../media/compressed/bg_como-fazemos.png) no-repeat;
+   background: url(../media/images/bg_como-fazemos-b.png) no-repeat;
    background-position: right top;
    width: 100%;
    height: 100%;
@@ -918,42 +976,47 @@ main#endo-culture {
 	width: 60%;
 }
 
-.menu-dot {
+.menu-dots .menu-dot {
 	width: .6rem;
 	height: .6rem;
-	border-radius: 50%;
-	border: 1px solid #25bb00;
+   border-radius: 50%;
+   border-width: 1px;
+   border-style: solid;
+	border-color: #25bb00;
 	transition: all ease-in-out .3s
 }
-.menu-dot:hover {
+.menu-dots .menu-dot:hover {
 	width: .8rem;
 	height: .8rem;
 	background: rgba(37, 187, 0, .4);
 }
 
-.menu-dot.actv {
-	
+.menu-dots .menu-dot.actv {
 	background: #25bb00;
-	
 }
 
-.menu-dot.white {
-	width: .6rem;
-	height: .6rem;
-	border-radius: 50%;
-	border: 1px solid #ffffff;
-	transition: all ease-in-out .3s
+.menu-dots.white .menu-dot {
+	border-color: #ffffff;
 }
-.menu-dot.white:hover {
-	width: .8rem;
-	height: .8rem;
+
+.menu-dots.white .menu-dot:hover {
 	background: rgba(255, 255, 255, .4);
 }
 
-.menu-dot.white.actv {
-	
+.menu-dots.white .menu-dot.actv {
 	background: white;
-	
+}
+
+.menu-dots.purple .menu-dot {
+   border-color: #C240D3;
+}
+
+.menu-dots.purple .menu-dot:hover {
+	background: rgba(194, 64, 211, .4);
+}
+
+.menu-dots.purple .menu-dot.actv {
+	background: #C240D3;
 }
 
 .menu-dots {
@@ -961,7 +1024,7 @@ main#endo-culture {
 	right: 2rem;
 	top:0;
 	bottom: 0;
-	z-index: 10;
+	z-index: 999;
 }
 
 .thumbs-container {
@@ -1069,8 +1132,29 @@ img.time_tw {
 	margin-left: 1rem;
 }
 
+@media (max-width: 1500px) {
+   #skills .skills-card:not(:last-child) .thumb span {
+      white-space: normal;
+   }
+
+   #comoFazemos .pontos span:first-child {
+      top: 303px;
+      right: 818px;
+   }
+
+   #comoFazemos .pontos span:nth-child(2) {
+      top: 326px;
+      right: 256px;
+   }
+}
+
 @media (max-width: 1300px)
 {
+
+   main#index .rotas__quote img {
+      width: 100%;
+      height: auto;
+   }
 	
 	.menu-dots {
 		right: 1.3rem;
@@ -1282,7 +1366,7 @@ img.time_tw {
    }
 
    
-   #sobreNew .fotos {
+   #sobre .fotos {
       display: none !important;
    }
 
@@ -1322,18 +1406,18 @@ img.time_tw {
    }
 
    #comoFazemos .pontos span:first-child {
-      top: 331px;
-      right: 496px;
+      top: 289px;
+      right: 749px;
    }
    
    #comoFazemos .pontos span:nth-child(2) {
-      top: 477px;
-      right: 516px;
+      top: 263px;
+      right: 201px;
    }
    
    #comoFazemos .pontos span:last-child {
-      top: 598px;
-      right: 162px;
+      top: 428px;
+      right: 369px;
    }
 
    #comoFazemos .pontos span:before {
@@ -1388,11 +1472,11 @@ img.time_tw {
 		left: auto;
    }
 
-   #sobreNew > .row {
+   #sobre > .row {
       background-color: rgba(194, 64, 211, .5);
    }
 
-   #sobreNew .quote {
+   #sobre .quote {
       top: -65px;
       right: 0;
       left: auto;
@@ -1407,18 +1491,18 @@ img.time_tw {
    }
 
    #comoFazemos .pontos span:first-child {
-      top: 349px;
-      right: 249px;
+      top: 268px;
+      right: 282px;
    }
    
    #comoFazemos .pontos span:nth-child(2) {
-      top: 427px;
-      right: 260px;
+      top: 349px;
+      right: 233px;
    }
    
    #comoFazemos .pontos span:last-child {
-      top: 604px;
-      right: 78px;
+      top: 449px;
+      right: 131px;
    }
 }
 
@@ -1441,18 +1525,18 @@ img.time_tw {
    }
 
    #comoFazemos .pontos span:first-child {
-      top: 323px;
-      right: 146px;
+      top: 270px;
+      right: 202px;
    }
    
    #comoFazemos .pontos span:nth-child(2) {
-      top: 390px;
-      right: 163px;
+      top: 349px;
+      right: 58px;
    }
    
    #comoFazemos .pontos span:last-child {
-      top: 602px;
-      right: 160px;
+      top: 472px;
+      right: 123px;
    }
 }
 
@@ -1461,18 +1545,32 @@ img.time_tw {
       letter-spacing: .1rem;
    }
 
+   #comoFazemos {
+      height: 800px;
+   }
+
+   #comoFazemos .pontos {
+      position: relative;
+   }
+
    #comoFazemos .pontos span:first-child {
-      top: 444px;
-      right: 97px;
+      top: 0px;
+      left: 25%;
    }
    
    #comoFazemos .pontos span:nth-child(2) {
-      top: 603px;
-      right: 43px;
+      top: 120px;
+      left: 25%;
    }
    
    #comoFazemos .pontos span:last-child {
-      top: 669px;
-      right: 207px;
+      top: 240px;
+      left: 25%;
+   }
+}
+
+@media (max-width: 500px) {
+   #comoFazemos {
+      height: 800px;
    }
 }
