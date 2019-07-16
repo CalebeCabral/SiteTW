@@ -102,6 +102,10 @@ main#index {
    line-height: 2rem;
 }
 
+main#index .spacer.logo-rotas {
+   height: 10rem;
+}
+
 main#index .rotas span.break {
    display: block;
 }
@@ -162,18 +166,7 @@ main#content-business .parallax {
 }
 
 main#content-business .parallax img {
-   animation: parallaxAnimation 20s infinite ease;
-}
-
-.ref-point {
-   width: 10px;
-   height: 15px;
-   border-radius: 50%;
-   background-color: #fff;
-   position: absolute;
-   top: 387px;
-   left: 982px;
-   display: none;
+   animation: parallaxAnimation 25s 4s infinite ease both;
 }
 
 @keyframes parallaxAnimation {
@@ -199,7 +192,7 @@ main#content-business .parallax img {
    line-height: 3rem;
 }
 
-#sobre .quote {
+main#content-business #sobre .quote {
    position: absolute;
    width: 40px;
    top: -95px;
@@ -259,8 +252,29 @@ main#content-business .parallax img {
    display: block;
 }
 
-#skills .title-box {
-   width: 30% !important;
+#atuacao .fotos {
+   position: absolute;
+   top: 0;
+   left: 0;
+   opacity: .7;
+}
+
+#atuacao .fotos img {
+   position: absolute;
+}
+
+#atuacao .fotos img:first-child {
+   top: 0;
+   left: 0;
+}
+
+#atuacao .fotos img:last-child  {
+   top: 310px;
+   left: 460px;
+}
+
+#atuacao .texto span.break {
+   display: block;
 }
 
 #skills .title-box h3 {
@@ -274,7 +288,7 @@ main#content-business .parallax img {
 #skills .title-box .quote {
    width: 40px;
    position: absolute;
-   right: -20px;
+   left: -20px;
    top: 50%;
    transform: translateY(-50%);
 }
@@ -287,7 +301,7 @@ main#content-business .parallax img {
    width: 100%;
    height: 100%;
    position: absolute;
-   left: 0;
+   right: 0;
    top: 0;
    opacity: .5;
 }
@@ -298,14 +312,14 @@ main#content-business .parallax img {
    background-color: #C240D3;
 }
 
-#skills .title-box .purple-bg div:last-child {
+/* #skills .title-box .purple-bg div:last-child {
    width: 14%;
    height: 330px;
    position: absolute;
    background-color: #C240D3;
    top: 0;
    left: 0;
-}
+} */
 
 #skills .skills-card {
    line-height: 1.6rem;
@@ -350,10 +364,9 @@ main#content-business .parallax img {
    letter-spacing: 0.1rem
 }
 
-#comoFazemos .row .quote {
+main#content-business #comoFazemos .row .quote {
    position: absolute;
    top: -70px;
-   right: 85%;
 }
 
 #comoFazemos .row h3 {
@@ -415,7 +428,7 @@ main#content-business .parallax img {
 }
 
 #comoFazemos .purple-bg div:first-child {
-   background: url(../media/images/bg_como-fazemos-b.png) no-repeat;
+   background: url(../media/compressed/bg_como-fazemos.png) no-repeat;
    background-position: right top;
    width: 100%;
    height: 100%;
@@ -1361,11 +1374,6 @@ img.time_tw {
 		height: 1.5rem;
    }
    
-   #skills .title-box h3 {
-      text-align: right;
-   }
-
-   
    #sobre .fotos {
       display: none !important;
    }
@@ -1423,12 +1431,25 @@ img.time_tw {
    #comoFazemos .pontos span:before {
       top: 8px;
    }
+
+   #atuacao .fotos {
+      left: -100px;
+   }
 }
 
 @media (max-width: 1200px) {
    #skills .skills-card:nth-child(1),
    #skills .skills-card:nth-child(3)  {
       padding-top: 0rem;
+   }
+
+   #atuacao .fotos {
+      left: -200px;
+   }
+
+   #atuacao .fotos img:last-child {
+      left: 450px;
+      top: 250px;
    }
 }
 
@@ -1472,11 +1493,16 @@ img.time_tw {
 		left: auto;
    }
 
-   #sobre > .row {
+   main#content-business .parallax {
+      width: 70%;
+      right: 300px;
+   }
+
+   main#content-business #sobre > .row {
       background-color: rgba(194, 64, 211, .5);
    }
 
-   #sobre .quote {
+   main#content-business #sobre .quote {
       top: -65px;
       right: 0;
       left: auto;
@@ -1507,6 +1533,7 @@ img.time_tw {
 }
 
 @media (max-width: 700px) {
+   
 	.block-cit {
 		min-height: 63vh;
 	}
@@ -1545,6 +1572,11 @@ img.time_tw {
       letter-spacing: .1rem;
    }
 
+   main#content-business .parallax {
+      width: 70%;
+      right: 500px;
+   }
+
    #comoFazemos {
       height: 800px;
    }
@@ -1569,7 +1601,19 @@ img.time_tw {
    }
 }
 
+@media (max-width: 568px) {
+   main#index .rotas h1 {
+      line-height: 2.3rem;
+      font-size: 1.3rem;
+   }
+
+   main#index .rotas__quote {
+      width: 10%;
+   }
+}
+
 @media (max-width: 500px) {
+
    #comoFazemos {
       height: 800px;
    }
