@@ -19,8 +19,8 @@
 
 html,body
 {
-	width: 100%;
-	height: 100%;
+	width: 100vw;
+	height: 100vh;
 }
 
 main {
@@ -102,6 +102,10 @@ main#index {
    line-height: 2rem;
 }
 
+main#index .logo-mobile {
+   top: 8%;
+}
+
 main#index .spacer.logo-rotas {
    height: 10rem;
 }
@@ -143,7 +147,7 @@ main#index .footer__social-icons > a {
 }
 
 main#index .footer__social-icons img {
-   width: 40px;
+   max-width: 40px;
 }
 
 /* 
@@ -153,6 +157,7 @@ main#index .footer__social-icons img {
 main#content-business {
    background: url(../media/compressed/bg.jpg) no-repeat;
    background-position: center;
+   background-size: cover;
    letter-spacing: .3rem;
 }
 
@@ -228,13 +233,6 @@ main#content-business #sobre .quote {
    background-color: #C240D3;
 }
 
-#sobre .fotos {
-   position: absolute;
-   right: 0;
-   opacity: .7;
-   display: block;
-}
-
 #sobre .fotos img:first-child {
    position: absolute;
    right: 0;
@@ -256,7 +254,7 @@ main#content-business #sobre .quote {
    position: absolute;
    top: 0;
    left: 0;
-   opacity: .7;
+   opacity: 1;
 }
 
 #atuacao .fotos img {
@@ -312,15 +310,6 @@ main#content-business #sobre .quote {
    background-color: #C240D3;
 }
 
-/* #skills .title-box .purple-bg div:last-child {
-   width: 14%;
-   height: 330px;
-   position: absolute;
-   background-color: #C240D3;
-   top: 0;
-   left: 0;
-} */
-
 #skills .skills-card {
    line-height: 1.6rem;
    letter-spacing: .1rem;
@@ -366,7 +355,7 @@ main#content-business #sobre .quote {
 
 main#content-business #comoFazemos .row .quote {
    position: absolute;
-   top: -70px;
+   top: -35px;
 }
 
 #comoFazemos .row h3 {
@@ -1146,6 +1135,13 @@ img.time_tw {
 }
 
 @media (max-width: 1500px) {
+   #atuacao .fotos {
+      position: absolute;
+      top: 0;
+      left: 0;
+      opacity: .7;
+   }
+   
    #skills .skills-card:not(:last-child) .thumb span {
       white-space: normal;
    }
@@ -1386,10 +1382,6 @@ img.time_tw {
       width: 40% !important;
    }
 
-   #comoFazemos {
-      padding-top: 1.5rem !important;
-   }
-
    #comoFazemos .row.chamada {
       flex-direction: column-reverse !important;
    }
@@ -1514,6 +1506,10 @@ img.time_tw {
 
    #skills .skills-card:nth-child(3) {
       margin-top: 0rem;
+   }
+
+   main#content-business #comoFazemos .row .quote {
+      top: -70px;
    }
 
    #comoFazemos .pontos span:first-child {
